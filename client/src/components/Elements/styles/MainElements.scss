@@ -1,0 +1,21 @@
+@import '../../util';
+
+.outOfStackTag{
+    width:3em;
+    height:3em;
+    border-radius: 50%;
+    background-color:colors(actionClr2);
+    position:absolute;
+    right: -38%;
+    bottom:-30%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.205);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    p{
+        font-size: .6em;
+        text-align: center;
+        color:#fff;
+        letter-spacing: .1em;
+    }
+}

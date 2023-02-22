@@ -1,0 +1,56 @@
+@import '../util';
+
+
+#mClose{
+    position:absolute;
+    top:5%;
+    right:10%;
+    cursor: pointer;
+    font-size: 1.5em;
+    padding: .5em;
+    border-radius: 50%;
+    color:#fff;
+    background-color: rgba(255, 255, 255, 0.178);
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1) 1s;
+    &:hover{
+        background-color: colors(actionClr2);
+    }
+    z-index: 999;
+}
+.logo{
+    color:#fff;
+    font-family:$primaryFont;
+    font-weight: 600;
+    letter-spacing:1px;
+    font-size: 1.6em;
+    z-index: 9;
+    position:absolute;
+    top:10%;
+    left:10%;
+    span{
+        color:var(--actionClr2)
+    }
+}
+
+#mElmContainer{
+    width:100%;
+    height:100vh;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    // .mElm{
+    //     flex-basis: 30%;
+    //     height: inherit;
+    //     background-color: yellow;
+    // }
+}
+
+#menuContent{
+    width:100%;
+    height:100vh;
+    position:absolute;
+    top:0;
+    @include flex(center,center);
+  
+}

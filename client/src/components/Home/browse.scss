@@ -1,0 +1,103 @@
+@import '../util';
+
+#browse{
+    width:100%;
+    min-height:100vh;
+    padding-top:10vh;
+    h1{
+        // font-family: $HeadingFont;
+        color:colors(primText);
+        letter-spacing: .1em;
+        font-weight:500;
+        text-align: center;
+        margin-top: 1em;
+    }
+    #categories{
+        width: 90%;
+        height: 90vh;
+        // background-color:red;
+        margin:0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-top:1em;
+        margin-bottom: 1em;
+        .cElm{
+            // background-color: yellow;
+            flex-basis: 12%;
+            gap:1;
+            height: 90%;
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+            @include mobile(813px){
+                height: 12%;
+                width: 100%;
+            }
+
+            &:nth-child(4){
+                flex-basis: 20%;
+            }
+            img{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                object-position: center;
+            }
+            .cOvly{
+                width: 100%;
+                height: 100%;
+                top:0;
+                position: absolute;
+                background-color: colors(shade);
+            }
+            h1{
+                position: absolute;
+                top:50%;
+                left: 50%;
+                transform: translate(-50%,-50%) rotate(-90deg);
+                color:colors(primText);
+                font-weight: 300;
+                z-index: 99;
+                @include mobile(813px){
+                    transform: translate(-50%,-50%) rotate(0deg);
+                    top:25%;
+                
+                }
+            }
+            &::after{
+                content: "";
+                top:0;
+                left: -100%;
+                width: 100%;
+                height: 100%;
+                background-color: colors('background');
+                position: absolute;
+                transition: cubic-bezier(0.075, 0.82, 0.165, 1) 1s;
+            }
+            &:hover::after{
+                left: 0;
+            }
+        }
+        @include mobile(813px){
+            padding-left: 10vw;
+            flex-direction: column;
+        }
+    }
+}
+
+#cMid{
+    flex-basis: 20%;
+    height: 90%;
+    position: relative;
+    @include mobile(813px){
+        height: 20%;
+        width: 100%;
+    }
+    img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+    }
+}

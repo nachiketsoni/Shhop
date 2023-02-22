@@ -1,0 +1,263 @@
+
+@import '../util';
+
+nav{
+    height:10vh;
+    position:fixed;
+    z-index: 110;
+    background-color: colors(card);
+    width:100%;
+    box-shadow:0 0 20px rgba(0, 0, 0, 0.116);
+    font-size: 13px;
+    @include flex;
+    padding:0 4em;
+    @include mobile(900px){
+      font-size: 12px;
+    }
+    
+    #nlft{
+        width:60%;
+        height:inherit;
+        // background-color:yellow;
+        @include flex(start,center);
+        .logo{
+            color:colors('logo');
+            font-family:$primaryFont;
+            font-weight: 600;
+            letter-spacing:1px;
+            font-size: 2em;
+            span{
+                color:var(--actionClr2)
+            }
+            @include mobile(300px){
+                font-size: 1.5em;
+            }
+        }
+        .nLinks{
+            a{
+                text-decoration: none;
+                color:colors('primText');
+                letter-spacing: 1px;
+                font-size: 1.1em;
+                margin-left:1em;
+                font-weight: 500;
+                &:first-child{
+                    margin-left:3em;
+                    @include mobile(900px){
+                        margin-left:1em ;
+                    }
+                }
+                @include mobile(900px){
+                    margin-left:.5em ;
+                }
+                
+            }
+            @include mobile(813px){
+                display: none;
+            }
+
+        }
+        @include mobile(900px){
+            width: 50%;
+        }
+        @include mobile(813px){
+            width: 30%;
+        }
+
+    }
+    #nrt{
+        width:40%;
+        height:inherit;
+        // background-color: red;
+        @include flex;
+        .nSrch{
+            width: 40%;
+            background-color: colors('hover');
+            padding: .5em;
+            border-radius: 2em;
+            @include flex(center,center);
+            input{
+                border: none;
+                background-color: transparent;
+                border-bottom: 2px solid colors(actionClr1);
+                outline: none;
+                width: 90%;
+                &::placeholder{
+                    color:colors(secText);
+                    letter-spacing: 1px;
+                    font-size: .8em;
+                    @include mobile(300px){
+                        font-size: .6em;
+                    }
+                }
+               
+            }
+            @include mobile(813px){
+              width: 50%;
+            }
+            @include mobile(300px){
+                font-size: 8px;
+            }
+          
+
+        }
+        .themeChange{
+            width:2em;
+            height:2em;
+            border-radius:50%;
+            @include flex(center,center);
+            background-color:colors(hover);
+            cursor: pointer;
+            i{
+                color:colors(primText);
+                font-size: 1.3em;
+            }
+            @include mobile(813px){
+                display: none;
+            }
+        }
+        .signBtn{
+            padding:.5em 1em;
+            background-color: colors(actionClr2);
+            border-radius: .5em;
+            border:none;
+            color:#fff;
+            letter-spacing: .1em;
+            width:30%;
+            p{
+                word-wrap: break-word;
+                text-decoration: none;
+            }
+            cursor: pointer;
+            // @include mobile(813px){
+            //     display: none;
+            // }
+            @include mobile(700px){
+                // padding:.5em .5em;
+                font-size: .8em;
+            }
+            @include mobile(450px){
+                // padding:.5em .5em;
+                width: 35%;
+
+            }
+        }
+        .cart{
+            @include flex(center,center);
+            position: relative;
+            i{
+                font-size: 1.5em;
+                color:colors(primText)
+            }
+            .cCount{
+                position:absolute;
+                background-color: colors(actionClr1);
+                color:#fff;
+                border-radius: 50%;
+                @include flex(center,center);
+                width: 1em;
+                height: 1em;
+                top:-20%;
+                right:-10%;
+                p{
+                    font-size: .6em;
+                }
+            }
+            @include mobile(813px){
+                display: none
+            }
+        }
+        .user{
+            @include flex(space-between,end);
+            width: 25%;
+            // background-color: red;
+            .uDp{
+                width: 3em;
+                height: 3em;
+                overflow: hidden;
+                border-radius: 50%;
+                img{
+                    width: 100%;
+                    height:100%;
+                    object-fit: cover;
+                    object-position: center;
+                }
+                cursor: pointer;
+            }
+            .uText{
+                position:relative;
+                height: inherit;
+                padding-bottom: .5em;
+            // background-color: red;
+
+                h4{
+                    position:absolute;
+                    font-weight: 600;
+                    letter-spacing: 1px;
+                    transform: translate(-50%,-50%) rotate(-20deg);
+                    color:colors(primText);
+                    font-size: 1.2em;
+                    top:-40%;
+                }
+                h3{
+                    letter-spacing: 1px;
+                    font-weight: 400;
+                    color:colors(secText);
+
+                }
+                
+            }
+            @include mobile(1100px){
+                width: 30%;
+            }
+            @include mobile(813px){
+                width: 40%;
+                @include flex(space-between,center);
+            }
+            @include mobile(300px){
+                font-size: 8px;
+            }
+
+        }
+        #menu{
+            color:colors(primText);
+            display: none;
+            @include mobile(813px){
+                display: initial;
+            }
+            font-size: 1.5em;
+        }
+        @include mobile(900px){
+            width: 50%;
+        }
+        @include mobile(813px){
+            width: 80%;
+        }
+
+
+    }
+    @include mobile(650px){
+        padding:0 2em;
+    }
+    @include mobile(500px){
+        font-size: 10px;
+        // padding: 0 1em;
+    }
+ 
+}
+
+.menu{
+    width:100%;
+    height:100vh;
+    background-color: rgba(0, 0, 0, 0.178);
+    position:absolute;
+    top:0;
+    z-index: 99999;
+    left:0;
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1) 1s;
+
+    display: none;
+    // display: flex;
+    // align-items: center;
+    // justify-content: center;
+}

@@ -1,0 +1,17 @@
+@import '../../util';
+
+#aOrderHeader{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2vh 10vw;
+    margin-top: 3vh;
+    margin-bottom: 5vh;
+    background-color: colors(card);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.075);
+    h1{
+        font-weight: 500;
+        color:colors(primText);
+    }
+}

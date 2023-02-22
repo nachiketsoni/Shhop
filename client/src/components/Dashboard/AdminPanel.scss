@@ -1,0 +1,219 @@
+@import '../util';
+
+
+
+#AdminPanel{
+    width:100%;
+    min-height:100vh;
+    background-color:colors('background');
+    // background-color: yellow;
+    padding-left: 20vmax;
+    padding-bottom: 10vh;
+    // border:1px solid transparent;
+    @include mobile(700px){
+        padding-left: 0;
+    }
+  
+}
+#AdminNav{
+    width:20vmax;
+    height:100vh;
+    left:0;
+    position:fixed;
+    background-color: colors(actionClr1);
+    padding: 4em 0;
+ 
+    #content{
+        width: 100%;
+        height:100%;
+        @include flex(space-between,center,column);
+        &>p{
+            width:70%;
+            font-size: .7em;
+            letter-spacing: 1px;
+            font-weight: 100;
+            color:#fff;
+        }
+      
+
+    }
+    #adminNavLinks{
+        width: 80%;
+        // background-color: yellow;
+        @include flex(space-between,center,column);
+        @include mobile(1000px){
+            font-size: 12px;
+        }
+        @include mobile(830px){
+            font-size: 10px;
+        }
+        
+        .dashLink{
+            width: 100%;
+            // background-color: red;
+            padding: .5em 0;
+            padding-left: 4em;
+            padding-right: 1em;
+           @include flex(space-between,center);
+           border-radius: 2em;
+           font-size: 10px;
+           font-weight: 400;
+           cursor: pointer;
+           h3{
+            font-size: 1.4em;
+            letter-spacing: 1px;
+            color:#fff;
+            font-weight: 500;
+           }
+           i{
+            font-size: .8em;
+            color:#fff;
+            border:1px solid #fff;
+            border-radius: 50%;
+            padding: .2em;
+           }
+           @include mobile(830px){
+            padding-left: 2em;
+        }
+          
+        }
+        .dashMainLink{
+            width:100%;
+            // background-color: orange;
+            @include flex(space-between,center);
+            cursor: pointer;
+            h3{
+                font-size: 1.4em;
+                letter-spacing: 1px;
+                color:#fff;
+                font-weight: 500;
+               }
+               i{
+                font-size: 1.3em;
+                color:#fff;
+               }
+        }
+     
+        #adminOtherLinks{
+            width:100%;
+            // background-color: red;
+            height: 80%;
+            // padding-left: 3em;
+            @include flex(space-between,flex-end,column);
+            margin-top: 2em;
+            @include mobile(1000px){
+                font-size: 12px;
+            }
+            @include mobile(830px){
+                font-size: 10px;
+            }
+            
+        }
+    }
+    @include mobile(700px){
+        display: none;
+    }
+   
+   
+}
+
+#AdminMobNav{
+    position: fixed;
+    top:5%;
+    left: 5%;
+    display: none;
+    @include mobile(700px){
+        display: initial;
+    }
+}
+#adminDashboard{
+    width:100%;
+    min-height:inherit;
+    background-color: colors('background');
+    padding: 0 3em;
+    // background-color: rgb(121, 50, 50);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    h6{
+        font-weight: 400;
+        margin: 1em 0em;
+        font-size: 1.1em;
+        color:colors(secText);
+    }
+}
+.alogo{
+    color:colors(logo);
+    font-family:$primaryFont;
+    font-weight: 600;
+    letter-spacing:1px;
+    font-size: 3em;
+    display: none;
+      @include mobile(700px){
+         display: initial;
+        
+      }
+  
+    span{
+        color:var(--actionClr2)
+    }
+    cursor: pointer;
+}
+.linkStyle{
+    text-decoration: none;
+    color:colors(primText);
+}
+
+.dashboard{
+    width: 100%;
+    min-height: inherit;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+#totalAmount{
+    width:100%;
+    padding: .5em 1em;
+    background-color:colors(hover);
+    color:#fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    h2{
+        font-weight: 400;
+        color:colors(primText)
+
+    }
+
+}
+.numFormat{
+    color:colors(secText);
+    letter-spacing: .1em;
+}
+#fullTally{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin: 1em 0;
+
+    .fTElm{
+        width: 30%;
+        background-color: colors(card);
+        padding: 1em;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.089);
+        h3{
+            color:colors(actionClr2);
+            // letter-spacing: .1em;
+        }
+        h1{
+            font-size: 3em;
+            font-weight: 300;
+            color:colors(primText);
+            @include mobile(813px){
+                font-size: 2em;
+            }
+        }
+    }
+}
