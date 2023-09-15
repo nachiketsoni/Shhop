@@ -1,0 +1,143 @@
+@import '../util';
+
+.register{
+    width:100vw;
+    height: 100vh;
+    background-image: url('./bg.png');
+    background-position: center;
+    background-size: cover;
+
+    
+}
+.overlay{
+    width:100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.356);
+}
+.logo{
+    color:colors('logo');
+    font-family:$primaryFont;
+    font-weight: 600;
+    letter-spacing:1px;
+    font-size: 2em;
+    span{
+        color:var(--actionClr2)
+    }
+    cursor: pointer;
+}
+
+.auth{
+    width: 400px;
+    height: 500px;
+    background-color: colors('background');
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    @include mobile(550px){
+        width: 100%;
+        height: 100%;
+    }
+}
+.fElm{
+    width:60%;
+    height: 5vh;
+    display:flex;
+    justify-content:space-between;
+    align-items: center;
+    margin-top: 1em;
+   
+    input{
+        width:90%;
+        border:none;
+        height: 95%;
+        background-color: transparent;
+        color:colors(primText);
+    border-bottom:1px solid colors(actionClr1);
+    outline: none;
+    &::placeholder{
+        color:colors(primText);
+    }
+
+    }
+    i{
+        color:colors(actionClr2);
+    }
+    p{
+        font-size: .7em;
+        font-style: italic;
+        letter-spacing: .1em;
+        text-align: center;
+        width: 100%;
+        color:colors(secText);
+        cursor: pointer;
+    }
+    h1{
+        font-size:1.1em;
+        font-family: $primaryFont;
+        letter-spacing: .1em;
+        font-weight: 400;
+        text-align: center;
+        color:colors(primText);
+        width: 100%;
+    }
+    button{
+        width:3em;
+        height: 3em;
+        border:none;
+        border-radius: 50%;
+        background-color: colors(actionClr2);
+        display: flex;
+        justify-content: center;
+        cursor: pointer;
+        align-items:center;
+        i{
+            color:#fff;
+        }
+    }
+  
+}
+#fBtn{
+    justify-content: flex-end;
+    // background-color: red;
+}
+.authForm{
+    width: 100%;
+    // background-color: yellow;
+    display: flex;
+    align-items: center;
+    flex-direction:column;
+
+}
+
+.password{
+   div{
+    width:90%;
+    // background-color: red;
+    height: inherit;
+    border-bottom:1px solid colors(actionClr1);
+    display:flex;
+    align-items: center;
+
+    input{
+        width:90%;
+        border:none;
+        height: 95%;
+        background-color: transparent;
+   
+    outline: none;
+    &::placeholder{
+        color:colors(primText);
+    }
+
+    }
+    i{
+        cursor: pointer;
+        font-size: .9em;
+    }
+   }
+}

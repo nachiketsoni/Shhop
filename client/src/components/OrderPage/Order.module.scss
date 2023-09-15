@@ -1,0 +1,331 @@
+@import '../util';
+
+.OrderPage{
+    width:100%;
+    min-height:100vh;
+    margin:0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1em 0;
+    background-color: colors('background');
+    .stepsPage{
+        width: 80%;
+        margin-top: 2em;
+        min-height: 80vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        // background-color: rgb(215, 215, 243);
+        position: relative;
+        .stepBack{
+            left:10%;
+            position: absolute;
+            bottom:5%;
+            padding:.5em 2em;
+            color:#fff;
+            background-color: colors(actionClr2);
+            border:none;
+            letter-spacing: 1px;
+            font-size: 1em;
+            border-radius: 1em;
+            cursor: pointer;
+
+        }
+        .stepNext{
+            right:10%;
+            position: absolute;
+            bottom:5%;
+            padding:.5em 2em;
+            color:#fff;
+            background-color: colors(actionClr2);
+            border:none;
+            letter-spacing: 1px;
+            font-size: 1em;
+            border-radius: 1em;
+            cursor: pointer;
+
+        }
+    }
+
+}
+
+.logo{
+    color:colors('logo');
+    font-family:$primaryFont;
+    font-weight: 600;
+    letter-spacing:1px;
+    font-size: 2em;
+    margin-bottom: 1em;
+    span{
+        color:var(--actionClr2)
+    }
+    cursor: pointer;
+}
+
+
+.ShipForm{
+    width: 100%;
+    height: 70vh;
+    // background-color: yellow;
+    display:flex;
+    align-items: center;
+    flex-direction:column;
+    @include mobile(800px){
+        width: 60%;
+    }
+    @include mobile(600px){
+        width: 90%;
+    }
+
+}
+
+.fElm{
+    width:70%;
+    height: 5vh;
+    display:flex;
+    justify-content:space-between;
+    align-items: center;
+    margin-top: 1em;
+   
+    input{
+        width:90%;
+        border:none;
+        height: 95%;
+        background-color: transparent;
+    border-bottom:1px solid colors(actionClr1);
+    outline: none;
+    &::placeholder{
+        color:colors(primText);
+    }
+
+    }
+    i{
+        color:colors(actionClr2);
+    }
+    p{
+        font-size: .7em;
+        font-style: italic;
+        letter-spacing: .1em;
+        text-align: center;
+        width: 100%;
+        color:colors(secText);
+        cursor: pointer;
+    }
+    h1{
+        font-size:1.1em;
+        font-family: $primaryFont;
+        letter-spacing: .1em;
+        font-weight: 400;
+        text-align: center;
+        color:colors(primText);
+        width: 100%;
+    }
+    button{
+        width:3em;
+        height: 3em;
+        border:none;
+        border-radius: 50%;
+        background-color: colors(actionClr2);
+        display: flex;
+        justify-content: center;
+        cursor: pointer;
+        align-items:center;
+        i{
+            color:#fff;
+        }
+    }
+    
+  
+}
+.fTextArea{
+    width: 70%;
+    margin-top: 1em;
+    height: 10vh;
+    textarea{
+        background-color: colors(lightHover);
+        resize: none;
+        width: 100%;
+        height: inherit;
+        outline: none;
+        text-align: end;
+        border:none;
+        &::placeholder{
+            color:colors(secText);
+            letter-spacing: 1px;
+            
+        }
+
+    }
+}
+.orderSummary{
+    width: 100%;
+    // background-color: yellow;
+    &>h4{
+        font-family: $primaryFont;
+        font-weight: 500;
+        text-transform: uppercase;
+        color:colors(primText);
+
+    }
+    &>p{
+        font-style: italic;
+        font-size: .9em;
+        color:colors(secText);
+        margin-top: 1em;
+        margin-left: .5em;
+    }
+    div{
+    background-color: colors(lightHover);
+    margin-top: 1em;
+
+        .oElm{
+            display:flex;
+            justify-content:space-between;
+            align-items: center;
+            margin:.2em 0;
+            // background-color:red;
+            h6{
+                color:colors(secText);
+                font-size: .8em;
+                letter-spacing:1px;
+                font-weight: 700;
+            }
+            h4{
+                font-size:.9em;
+                color:colors(primText);
+                font-weight: 500;
+            }
+            &:last-child{
+                h4{
+                    font-size: 1.4em;
+                color:colors(actionClr1);
+                }
+            }
+        }
+
+    }
+    .oData{
+        padding:1em;
+        hr{
+            border: 0;
+            border-bottom: 1px dashed #ccc;
+            background:colors('background');
+        }
+    }
+  
+   
+}
+
+.ShipInfo{
+    width: 100%;
+    margin-bottom: 1em;
+    &>h4{
+        font-family: $primaryFont;
+        font-weight: 500;
+        text-transform: uppercase;
+        color:colors(primText);
+
+    }
+    &>p{
+        font-style: italic;
+        font-size: .9em;
+        color:colors(secText);
+        margin-top: 1em;
+        margin-left: .5em;
+    }
+    &>div{
+        background-color: colors(lightHover);
+        margin-top: 1em;
+        padding: .5em 1em;
+        .sElm{
+            width: 80%;
+            margin-bottom: .5em;
+            h6{
+                color:colors(secText);
+                font-size: .7em;
+                font-weight: 600;
+                margin-bottom:.2em;
+                letter-spacing: 1px;
+            }
+            p{
+                color:colors(primText);
+                font-size: .8em;
+            }
+        }
+    }
+    &>button{
+        border: none;
+        background-color: colors(actionClr2);
+        color:#fff;
+        padding:.5em 1em;
+        border-radius: 2em;
+        cursor: pointer;
+        position: relative;
+        overflow: hidden;
+        margin-top: 1em;
+        &::after{
+            content: "";
+            position: absolute;
+            width: 100%;
+            height:100%;
+            top:0;
+            left: -100%;
+            transition: cubic-bezier(0.175, 0.885, 0.32, 1.275) 1s;
+            background-color: rgba(255, 255, 255, 0.096);
+        }
+        &:hover::after{
+            left: 0;
+
+        }
+    }
+}
+
+.PaymentForm{
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+}
+
+.OrderSuccess{
+    width: 50%;
+    height: 70vh;
+    background-color:colors('background');
+    @include flex(center,center);
+    flex-direction: column;
+
+    h1{
+        font-size:1.1em;
+    font-family: $primaryFont;
+    letter-spacing: .1em;
+    font-weight: 400;
+    text-align: center;
+    color:colors(primText);
+    width: 100%;
+    }
+    i{
+        margin-top: .3em;
+         font-size: 5em;
+         color:green;
+    }
+    @include mobile(500px){
+        width: 60%;
+    }
+    
+}
+
+.oBtn{
+    padding:1em 2em;
+    border:none;
+    background-color: colors(actionClr2);
+    border-radius: 1em;
+    color:#fff;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-top: 1em;
+    cursor: pointer;
+}

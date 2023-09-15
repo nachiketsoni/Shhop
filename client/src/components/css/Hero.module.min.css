@@ -1,0 +1,2 @@
+*{margin:0;padding:0;-webkit-box-sizing:border-box;box-sizing:border-box;font-family:'gilroy'}html,body{width:100%;height:100%}:root{--background:#fff;--card:#fff;--hover:#EAECE6;--secText:#565656;--primText:#222222;--logo:#669C96;--lightHover:#f0f3f0;--actionClr1:#669C96;--actionClr2:#E26849}main{width:100%;min-height:100vh;background-color:var(--background)}.logo{color:var(--logo);font-family:"Montserrat";font-weight:600;letter-spacing:1px;font-size:2em;margin-bottom:1em;cursor:pointer}.logo span{color:var(--actionClr2)}
+/*# sourceMappingURL=Hero.module.min.css.map */

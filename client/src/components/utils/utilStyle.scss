@@ -1,0 +1,24 @@
+@import '../util';
+
+#ErrorPage{
+    width:100%;
+    height:100vh;
+    background-color: colors('background');
+    @include flex(center,center,column);
+    img{
+        height: 30vmax;
+    }
+    h2{
+        margin-top: 1em;
+        cursor: pointer;
+        color:colors(primText);
+        transition: cubic-bezier(0.075, 0.82, 0.165, 1) 1s;
+        &:hover{
+          text-decoration: underline;
+        }
+        &:active{
+            color:rgb(201, 201, 201);
+        }
+    }
+
+}

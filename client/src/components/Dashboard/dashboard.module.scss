@@ -1,0 +1,18 @@
+@import '../util';
+
+.logo{
+    color:#fff;
+    font-family:$primaryFont;
+    font-weight: 600;
+    letter-spacing:1px;
+    font-size: 3em;
+    
+      @include mobile(900px){
+        font-size: 2em;
+      }
+  
+    span{
+        color:var(--actionClr2)
+    }
+    cursor: pointer;
+}

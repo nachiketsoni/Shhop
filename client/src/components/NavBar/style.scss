@@ -1,0 +1,57 @@
+@import '../util';
+
+.gsapAnim{
+    flex-basis: 20%;
+    height: inherit;
+    background-color:#669c96;
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1) 1s;
+    will-change: transition;
+    transform: rotateY(45deg);
+    opacity: 0;
+}
+
+//profile menu 
+#menuIndex{
+    width:400px;
+    height: 80vh;
+    // background-color: rgb(255, 0, 0);
+    @include flex(center,center,column);
+
+    @include mobile(500px){
+        width: 100%;
+        height: 100vh;
+    }
+    .mText{
+        position: relative;
+        width: fit-content;
+        height: fit-content;
+        cursor: pointer;
+        margin-top: 1em;
+        h1{
+            text-transform: uppercase;
+            font-family: $primaryFont;
+            font-size: 3em;
+            color:rgba(255, 255, 255, 0.404);
+        }
+        h5{
+            text-transform: lowercase;
+            font-family: $HeadingFont;
+            position: absolute;
+            transform: translate(-50%,0%);
+            bottom:-20%;
+            left:50%;
+            font-size: 2.5em;
+            font-weight: 200;
+            color:#fff;
+        }
+    }
+    #logout{
+        padding: .5em 1em;
+        border-radius:2em;
+        color:#fff;
+        background-color: colors(actionClr2);
+        margin-top: 2em;
+        cursor: pointer;
+        }
+    
+}

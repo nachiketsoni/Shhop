@@ -1,0 +1,71 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: 'gilroy';
+}
+html,body{
+    width:100%;
+    height:100%;
+}
+
+:root{
+    --background:#fff;
+    --card:#fff;
+    --hover:#EAECE6;
+    --secText:#565656;
+    --primText:#222222;
+    --logo:#669C96;
+    --lightHover:#f0f3f0;
+    
+    --actionClr1:#669C96;
+    --actionClr2:#E26849;
+    --shade:rgba(0, 0, 0, 0.301);
+
+
+}
+// :root{
+//     --background:#222222;
+//     --card:#242526;
+//     --hover:#565656;
+//     --secText:#D8D8D8;
+//     --primText:#fff;
+//     --logo:#fff;
+    
+//     --actionClr1:#669C96;
+//     --actionClr2:#E26849;
+
+
+// }
+
+$colors:(
+    'background':var(--background),
+    'card':var(--card),
+    'hover':var(--hover),
+    'secText':var(--secText),
+    'primText':var(--primText),
+    'logo':var(--logo),
+    'lightHover':var(--lightHover),
+    'actionClr1':var(--actionClr1),
+    'actionClr2':var(--actionClr2),
+    'shade':var(--shade)
+    
+);
+@function colors($color){
+    @return map-get($colors,$color);
+};
+$primaryFont:"Montserrat";
+$HeadingFont:'Greyst';
+
+@mixin flex($justify:space-between,$align:center,$direction:row) {
+    display:flex;
+    justify-content: $justify;
+    align-items:$align;
+    flex-direction: $direction;
+
+}
+@mixin mobile($mobile){
+    @media(max-width:$mobile){
+        @content;
+    }
+}

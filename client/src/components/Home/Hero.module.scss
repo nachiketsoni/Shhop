@@ -1,0 +1,20 @@
+@import '../util';
+main{
+    width: 100%;
+    min-height: 100vh;
+    background-color:colors('background') ;
+}
+
+.logo{
+    color:colors('logo');
+    font-family:$primaryFont;
+    font-weight: 600;
+    letter-spacing:1px;
+    font-size: 2em;
+    margin-bottom: 1em;
+    span{
+        color:var(--actionClr2)
+    }
+    cursor: pointer;
+}
+

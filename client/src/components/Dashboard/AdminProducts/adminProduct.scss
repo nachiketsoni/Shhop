@@ -1,0 +1,98 @@
+@import '../../util';
+
+#aProduct{
+    width: 100%;
+    // background-color: yellow;
+    // height: 20vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2vh 10vw;
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+    background-color: colors(card);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.075);
+    button{
+        border: none;
+        background-color: colors(actionClr2);
+        color:#fff;
+        padding:.5em 2em;
+        letter-spacing: .1em;
+        border-radius: 1em;
+        cursor: pointer;
+    }
+    h1{
+        font-weight: 500;
+        color:colors(primText);
+
+
+    }
+}
+
+.adminProductDelete{
+    cursor: pointer;
+    background-color:colors(actionClr2);
+    border-radius: 50%;
+    padding: .5em;
+    color:#fff;
+
+}
+
+.adminPrductUpdate{
+    cursor: pointer;
+    color:colors(actionClr1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.158);
+    border-radius: 50%;
+    padding: .5em;
+}
+#pModelHeader{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    // background-color: red;
+
+
+}
+#pModelBody{
+    width:100%;
+    margin-top: 2em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    // background-color: yellow;
+}
+.pElm{
+    width:100%;
+    display: flex;
+    margin-top: 1em;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 1em;
+    // background-color: rgba(0, 0, 255, 0.438);
+    div{
+    //    background-color: rgba(255, 0, 0, 0.39);
+    }
+}
+
+#pTags{
+    width: 70%;
+    height: 10vh;
+    flex-wrap: wrap;
+    display: flex;
+    overflow-y: auto;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-around;
+    gap:5px;
+    padding:.5em;
+}
+
+.pImgs{
+    width: 100%;
+    // background-color: yellow;
+    display: flex;
+    margin-top: 1em;
+    flex-direction: column;
+
+}
