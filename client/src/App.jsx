@@ -33,7 +33,9 @@ import AdminUsers from "./components/Dashboard/AdminUsers/AdminUsers";
 import AdminEditProduct from "./components/Dashboard/AdminProducts/AdminEditProduct";
 import InternalServer from "./components/utils/InternalServer";
 import ProductDetails from "./components/ProductDetails/ProductDetails";
-
+import axios from 'axios'
+const url="https://shhop-backend.vercel.app";
+axios.defaults.baseURL = url
 function App() {
   const { products } = useSelector((store) => store.products);
   const { user, isAuthenticated, admin, loading, success, error } = useSelector(
