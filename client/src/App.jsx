@@ -34,7 +34,7 @@ import AdminEditProduct from "./components/Dashboard/AdminProducts/AdminEditProd
 import InternalServer from "./components/utils/InternalServer";
 import ProductDetails from "./components/ProductDetails/ProductDetails";
 import axios from 'axios'
-const url="https://shhop-backend.vercel.app";
+const url="https://shhop-f88r.onrender.com";
 axios.defaults.baseURL = url
 function App() {
   const { products } = useSelector((store) => store.products);
